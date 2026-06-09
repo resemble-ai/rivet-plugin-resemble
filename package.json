@@ -1,0 +1,32 @@
+{
+  "name": "rivet-plugin-resemble",
+  "version": "0.1.0",
+  "description": "Rivet plugin for Resemble AI deepfake detection, media intelligence, and watermarking.",
+  "type": "module",
+  "main": "dist/bundle.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "*": {
+      "default": "./dist/bundle.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -b && tsx bundle.ts",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": ["rivet", "rivet-plugin", "resemble", "deepfake", "detection"],
+  "license": "MIT",
+  "dependencies": {
+    "@ironclad/rivet-core": "^1.20.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.19.2",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0"
+  },
+  "rivet": {
+    "skipInstall": true
+  }
+}
